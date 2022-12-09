@@ -14,7 +14,7 @@ const listCondition = (car, price) => {
 const getInfo = async (object, i) => {
     const resList = await fetch(object);
     const array = await resList.json();
-    const list = await array.cars[i];
+    const list = array.cars[i];
 
     listCondition(`Тачка ${list.brand} ${list.model}`, `Цена ${list.price}$`);
 };
